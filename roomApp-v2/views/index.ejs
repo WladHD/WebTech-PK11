@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Verfügbare Räume</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/flexbox.css">
+        <script src="./js/script.js"></script>
+    </head>
+    <body>
+        <div class="vertical-box">
+            <%- include("includes/header.ejs") %>
+            <%- include("includes/nav.ejs") %>
+
+            <div class="horizontal-box resize-break">
+                <main class="index-main">
+                    <div class="vertical-box">
+                        <div>
+                            <h2>Verfügbare Räume</h2>
+
+                            <form action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php" method="get">
+                                <fieldset>
+                                    <legend>Nach Raum suchen</legend>
+                                    <label>Raumnummer<span class="required"></span><input type="text" name="roomno" pattern="[A-Z]\.[E1-3]\.[0-9]{2}" required></label> <!--[a-z] -->
+                                </fieldset>
+
+                                <fieldset>
+                                    <input type="submit" value="Suchen">
+                                </fieldset>
+                            </form>
+
+                            <ul>
+                                <%- raeume %>
+                            </ul>
+                        </div>
+
+                    </div>
+                </main>
+
+                <%- include("includes/aside.ejs") %>
+            </div>
+
+            <%- include("includes/footer.ejs") %>
+        </div>
+    </body>
+</html>

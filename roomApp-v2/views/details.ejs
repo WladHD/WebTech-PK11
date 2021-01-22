@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Details</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="grid">
+            <%- include("includes/header.ejs") %>
+            <%- include("includes/nav.ejs") %>
+
+            <main>
+                <h2>Details zum Raum A.E.01</h2>
+
+                <div class="grid-details-info">
+                    <section class="details-room-information">
+                        <h3>Informationen zum Raum</h3>
+
+                        <table></table>
+                    </section>
+
+                    <section class="details-room-bookings">
+                        <h3>Buchungen zum Raum</h3>
+
+                        <table id="room-bookings">
+                            <thead>
+                                <tr>
+                                    <th>Datum</th>
+                                    <th>Startuhrzeit</th>
+                                    <th>Enduhrzeit</th>
+                                    <th>Bezeichnung</th>
+                                </tr>
+                            </thead>
+
+                            <tbody></tbody>
+                        </table>
+                    </section>
+
+                    <figure>
+                        <img src="img/details/AE01.jpg" alt="Raumfoto von EF 42" width="600" height="367">
+                        <!-- Quelle (entspricht nicht EF 42 A.E.01): http://www.pflichtlektuere.com/24/11/2009/hoersaal-in-der-ef-50-in-dortmund-besetzt/ -->
+
+                        <figcaption>
+                            Abbildung: Innenraum A.E.01
+                        </figcaption>
+                    </figure>
+                </div>
+
+            </main>
+
+            <%- include("includes/aside.ejs") %>
+            <%- include("includes/footer.ejs") %>
+        </div>
+    </body>
+</html>
